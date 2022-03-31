@@ -1,0 +1,9 @@
+@layout('layouts/master')
+@section('content')
+<form encType='multipart/form-data' action="{{ route('demo.post') }}" method="post">
+  <input type="file" name="file">
+  <div>
+    <button class="px-2 bg-gray-500" type="submit">soumettre</button>
+  </div>
+</form>
+@endsection
