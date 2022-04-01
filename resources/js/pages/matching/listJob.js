@@ -10,7 +10,20 @@ export default function ListJob({ data }) {
   const [posts,setPosts]=useState([])
   useEffect(()=>{getPosts();},[])
   const getPosts = ()=>{
-    axios.get("http://127.0.0.1:3333/jobs")
+    const datas = [
+      {
+        "job": "dev ops",
+        "location":"Paris"
+      }
+    ]
+    axios.post("http://localhost:8090/api/matching/match",{
+      professions:datas
+    },{
+      headers:{
+        "Content-Type": "application/json",
+        "Accept":"application/json"
+      }
+    })
     .then((response)=>{
       console.log(response.data)
       setPosts(response.data)})

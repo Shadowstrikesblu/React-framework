@@ -30,9 +30,10 @@ const FormulaireCreation = ()=>{
     }
     return <div className='w-full p-4'>
     <form onSubmit={handleSubmit} className='flex flex-col'>
-        Création de formulaire
-        <input onChange={(e)=>setTitle(e.target.value)} className='my-4' type="text" placeholder="titre du job"/>
-        <textarea onChange={(e)=>setDescription(e.target.value)} className='my-4'placeholder="soupir"/>
+        Formulaire de création de jobs
+        <input onChange={(e)=>setTitle(e.target.value)} className='my-4' type="text" placeholder="Titre du job"/>
+        <textarea onChange={(e)=>setDescription(e.target.value)} className='my-4'placeholder="Dewcription du job"/>
+        <input type={'number'}  className='my-4' placeholder="Salaire"/>
         <button  className='py-1 px-3 bg-teal-400 ' type='submit'>Créer</button>
     </form>
 </div>
