@@ -6,14 +6,16 @@ import Modal from 'react-modal'
 
 const stylemodal = {
   content:{
-    top : '50%',
+    top : '90%',
     left : '50%',
     right: 'auto',
     bottom: 'auto',
     marginRight: '-50%',
     transform: 'translate(-50%, -50%)',
+  
   }
 }
+
 Modal.setAppElement('#root');
 // function openModal() {
 //   setIsOpen(true);
@@ -70,25 +72,21 @@ export default function Resume() {
     setFile(e.target.files[0])
   }
   return (<>
-  <Modal
+    <Modal
         isOpen={isOpen}
         style={stylemodal}
         contentLabel="CGU">
-        <div className='h-80 w-80 bg-white border-black flex item-center justify-center'>
-        Article 6 : Responsabilité
-
-Bien que les informations publiées sur le site soient réputées fiables, le site se réserve la faculté d’une non-garantie de la fiabilité des sources.
-
-Les informations diffusées sur le site lapetiteperle sont présentées à titre purement informatif et sont sans valeur contractuelle. En dépit des mises à jour régulières, la responsabilité du site ne peut être engagée en cas de modification des dispositions administratives et juridiques apparaissant après la publication. Il en est de même pour l’utilisation et l’interprétation des informations communiquées sur la plateforme.
-
-Le site décline toute responsabilité concernant les éventuels virus pouvant infecter le matériel informatique de l’Utilisateur après l’utilisation ou l’accès à ce site.
-
-Le site ne peut être tenu pour responsable en cas de force majeure ou du fait imprévisible et insurmontable d’un tiers.
-
-La garantie totale de la sécurité et la confidentialité des données n’est pas assurée par le site. Cependant, le site s’engage à mettre en œuvre toutes les méthodes requises pour le faire au mieux.
-          <button style={{position: 'relative', }} className='h-5 w-15 bg-indigo-500' onClick={()=>{setIsOpen(false)}}>Refuser</button>
-
-          <button style={{position: 'relative', }} className='h-5 w-15 bg-indigo-500 'onClick={()=>{setIsOpen(false);setAccept(true)}}> Accepter</button>
+          <button className='' onClick={()=>{setIsOpen(false)}} >X</button>
+          <div className='flex items-center justify-center ' >
+          Conditions d'utilisation
+          </div>
+          <span className='color'></span>
+          <div className='flex items-left justify-left'>
+          Lorem ipsum lorem ipsum lorem ipsum
+          </div>
+        <div className=' flex item-center justify-center'>
+          <button  className='h-5 w-15 bg-indigo-500' onClick={()=>{setIsOpen(false)}}>Refuser</button>
+          <button  className='h-5 w-15 bg-indigo-500 'onClick={()=>{setIsOpen(false);setAccept(true)}}> Accepter</button>
         </div>
       </Modal>
     <div className="w-full py-24">
